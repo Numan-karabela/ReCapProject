@@ -2,14 +2,17 @@
 
 
 using Business.Concreet;
+using DataAccess.Concreet.EntityFramework;
 using DataAccess.Concreet.InMemory;
 
-CarManager carManager = new CarManager(new InMemoryCarDal());
-
+CarManager carManager = new CarManager(new EFCarDal());
 
 
 foreach (var car in carManager.GetAlll())
 {
 
-    Console.WriteLine(car.Id);
+    Console.WriteLine(car.DailyPrice);
 }
+
+
+ 

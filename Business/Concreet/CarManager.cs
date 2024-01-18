@@ -22,11 +22,12 @@ namespace Business.Concreet
 
         public List<Car> GetAlll()
         {
-            //şartlar iş yukleri
-            return _carDal.Getall();
-            
-
+            throw new NotImplementedException();
         }
-         
+
+        public List<Car> GetById(int id)
+        {
+           return _carDal.GetAll(p=>p.BrandId == id);
+        }
     }
 }
