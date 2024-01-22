@@ -49,7 +49,7 @@ namespace DataAccess.Concreet.InMemory
 
         public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
         {
-            throw new NotImplementedException();
+           return _cars.ToList();
         }
 
         public void Update(Car car)
