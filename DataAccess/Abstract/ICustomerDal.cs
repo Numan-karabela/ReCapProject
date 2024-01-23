@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface ICarDal :IEntityFramework<Car>
-    {  
+    public interface ICustomerDal:IEntityFramework<Customer>
+    {
     }
 }
