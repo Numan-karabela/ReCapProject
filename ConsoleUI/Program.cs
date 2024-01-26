@@ -6,19 +6,33 @@ using DataAccess.Concreet.EntityFramework;
 using DataAccess.Concreet.InMemory;
 using DataAccess.Context;
 using Entities.Concreet;
-
-
+using System.Reflection;
 
     CarManager carManager = new CarManager(new EFCarDal());
- 
-Car car1    = new Car();
-car1.Id = 2;
- 
+    CustomerManager  carss = new CustomerManager(new EfCustomerDal());
+    UserManager userr= new UserManager(new EfUserDal());
 
-carManager.delete(car1);
 
-foreach (var car in carManager.GetAlll())
+
+//User user = new User()
+//{
+//      Email = "numan@gmail.com", FirsName = "Numan", LastName = "Karabela", Password = "asda"
+//};
+
+//userr.add(user);
+
+
+//Customer customer = new Customer()
+//{
+//    CompanyName="numan",UserId=1
+//};
+
+
+//carss.add(customer);
+
+
+
+foreach (var item in userr.GetAll())
 {
-    Console.WriteLine(car.Description);
-
-}
+    Console.WriteLine(item.FirsName);
+} 

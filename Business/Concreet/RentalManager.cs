@@ -20,7 +20,16 @@ namespace Business.Concreet
 
         public void add(Rental rental)
         {
-            _rentalDal.Add(rental);
+            if (rental.ReturnDate == null) 
+            {
+                Console.WriteLine("Araba kirada");
+            }
+            else
+            {
+
+                _rentalDal.Add(rental);
+            }
+           
         }
 
         public void Delete(Rental rental)

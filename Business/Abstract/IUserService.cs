@@ -12,7 +12,7 @@ namespace Business.Abstract
         List<User> GetAll();
         List<User> GetById(int id);
         void add(User users);
-        void Delete(User users);
-        void update(User users);
+        void Delete(User user);
+        void update(User user);
     }
 }
